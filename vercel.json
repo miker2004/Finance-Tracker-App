@@ -1,15 +1,11 @@
 {
-    "projects": {
-      "root": "client"
-    },
-    "builds": [
-      {
-        "src": "client/package.json",
-        "use": "@vercel/static-build",
-        "config": {
-          "distDir": "client/dist"
-        }
+  "builds": [
+    {
+      "src": "client/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "client/dist"
       }
-    ]
-  }
-  
+    }
+  ]
+}
