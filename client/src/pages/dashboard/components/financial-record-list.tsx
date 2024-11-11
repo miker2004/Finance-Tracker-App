@@ -143,17 +143,17 @@ export const FinancialRecordList = () => {
           ))}
         </thead>
         <tbody {...getTableBodyProps()}>
-          {rows.map((row, idx) => {
-            prepareRow(row);
-            return (
-              <tr {...row.getRowProps()}>
-                {row.cells.map((cell) => (
-                  <td {...cell.getCellProps()}> {cell.render("Cell")} </td>
-                ))}
-              </tr>
-            );
-          })}
-        </tbody>
+        {rows.map((row) => {
+          prepareRow(row);
+          return (
+            <tr {...row.getRowProps()}>
+              {row.cells.map((cell) => (
+                <td {...cell.getCellProps()}>{cell.render("Cell")}</td>
+              ))}
+            </tr>
+          );
+        })}
+      </tbody>
       </table>
     </div>
   );
